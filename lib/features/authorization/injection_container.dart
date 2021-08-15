@@ -3,7 +3,6 @@ import 'package:hive/hive.dart';
 import 'package:mason_testing_ground/features/authorization/data/data_sources/local_auth_data_source.dart';
 import 'package:mason_testing_ground/features/authorization/data/data_sources/remote_auth_data_source.dart';
 import 'package:mason_testing_ground/features/authorization/data/interceptors/auth_interceptor.dart';
-import 'package:mason_testing_ground/features/authorization/data/model/token.dart';
 import 'package:mason_testing_ground/features/authorization/data/repositories/auth_repository_impl.dart';
 import 'package:mason_testing_ground/features/authorization/domain/repositories/auth_repository.dart';
 import 'package:mason_testing_ground/features/authorization/domain/use_cases/get_token_usecase.dart';
@@ -23,9 +22,6 @@ mixin AuthInjector on Injector {
     await super.init();
 
     //misc
-    final packageInfo = await PackageInfo.fromPlatform();
-    sl.registerLazySingleton<PackageInfo>(() => packageInfo);
-
     Hive.registerAdapter(TokenModelAdapter());
 
     final box = await Hive.openBox(authBoxId);

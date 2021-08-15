@@ -23,9 +23,6 @@ mixin AuthInjector on Injector {
     await super.init();
 
     //misc
-    final packageInfo = await PackageInfo.fromPlatform();
-    sl.registerLazySingleton<PackageInfo>(() => packageInfo);
-
     Hive.registerAdapter(TokenModelAdapter());
 
     final box = await Hive.openBox(authBoxId);
