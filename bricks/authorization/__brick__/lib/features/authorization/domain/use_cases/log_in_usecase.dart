@@ -19,17 +19,14 @@ class LogInParam extends Equatable {
   const LogInParam({
     required this.login,
     required this.password,
-    required this.deviceInfo,
   });
 
   final String login;
   final String password;
-  final DeviceInfo deviceInfo;
 
   @override
   List<Object?> get props => [
         login,
         password,
-        deviceInfo,
       ];
 }

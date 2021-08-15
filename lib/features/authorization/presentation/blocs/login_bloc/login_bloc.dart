@@ -21,7 +21,6 @@ class LoginBloc extends AnyAnimatedButtonBloc<LoginParameters, bool> {
     final result = await logInUseCase(LogInParam(
       login: event.object!.login,
       password: event.object!.password,
-      deviceInfo: data,
     ));
     authenticationBloc.add(CheckAuthenticationEvent());
     return result;
