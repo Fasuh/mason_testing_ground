@@ -1,0 +1,4 @@
+name: flutter_clean_architecture
+description: Initialize flutter clean architecture project
+vars:
+  - project_name

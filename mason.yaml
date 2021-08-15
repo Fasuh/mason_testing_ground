@@ -1,0 +1,7 @@
+bricks:
+  flutter_clean_architecture:
+    path: "bricks/flutter_clean_architecture"
+  feature:
+    path: "bricks/feature"
+  authorization:
+    path: "bricks/authorization"

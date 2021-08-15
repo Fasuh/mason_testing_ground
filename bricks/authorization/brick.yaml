@@ -1,0 +1,4 @@
+name: authorization
+description: Create an autorhization feature
+vars:
+  - project_name

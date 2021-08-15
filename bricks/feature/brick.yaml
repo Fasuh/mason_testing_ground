@@ -1,0 +1,4 @@
+name: feature
+description: Create a new feature
+vars:
+  - name
